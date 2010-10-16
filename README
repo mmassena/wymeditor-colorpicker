@@ -1,0 +1,50 @@
+WYMeditor : what you see is What You Mean web-based editor
+Copyright (c) 2005 - 2009 Jean-Francois Hovinne, http://www.wymeditor.org/
+Dual licensed under the MIT (MIT-license.txt)
+and GPL (GPL-license.txt) licenses.
+
+For further information visit:
+		http://www.wymeditor.org/
+
+File Name:
+		README - Color Picker plugin for WYMeditor
+
+File Authors:
+		Morgan Massena (morgan@mmassena.com)
+
+Credits:
+    'ColorPicker' by Stefan Petre
+        - http://www.eyecon.ro/colorpicker/
+
+    Icon 'colorpicker' by Gnome Project
+        - http://www.iconfinder.com/icondetails/21508/16/
+
+README
+======
+
+In order for this plugin to work with WYMeditor 0.5-rc-2
+the fix for issue #207 [1] needs to be applied. I have 
+included a patchfile for the jquery.wymeditor.js file
+
+Installation:
+
+- Copy the src/colorpicker directory to the wymeditor/plugins
+  directory.
+
+- Include the relevant jQuery, WYMeditor and ColorPicker
+  javascript and CSS files. Add a call to 'wym.colorpicker()'
+  in the postInit callback as follows:
+
+jQuery(function() {
+    jQuery('.wymeditor').wymeditor({
+        html: '<p>Hello, World!<\/p>',
+        postInit: function(wym) {
+            wym.colorpicker();
+        }
+    });
+});
+
+
+Footnotes:
+
+[1] http://trac.wymeditor.org/trac/ticket/207

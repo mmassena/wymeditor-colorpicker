@@ -1,0 +1,20 @@
+--- jquery.wymeditor.js.orig	2010-10-15 18:38:06.000000000 -0700
++++ jquery.wymeditor.js	2010-10-15 18:38:30.000000000 -0700
+@@ -4299,8 +4299,6 @@
+       var tag = new_tag;
+       this._tag_stack.push(new_tag);
+       attributes.style = '';
+-    }else{
+-      return;
+     }
+   }
+   
+@@ -4670,8 +4668,6 @@
+       if(typeof attributes['class'] == 'string')
+         attributes['class'] = attributes['class'].replace(/apple-style-span/gi, '');
+     
+-    } else {
+-      return;
+     }
+   }
+   
